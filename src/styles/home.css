@@ -1,0 +1,40 @@
+.home {
+  display: flex;
+  width: 100vw;
+}
+
+.container-categories {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  width: 17%;
+}
+
+.categories-list {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+}
+
+.categories-list li {
+  margin: 5px 0;
+  border: solid 1px black;
+}
+
+.categories-list li:hover {
+  cursor: pointer;
+}
+
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 83%;
+  padding: 50px;
+}
+
+.card-item {
+  border: solid 2px black;
+  max-width: 250px;
+  border-radius: 10px;
+  margin: 10px;
+}

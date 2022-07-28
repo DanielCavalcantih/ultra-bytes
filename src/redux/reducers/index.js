@@ -1,15 +1,27 @@
 import { combineReducers } from 'redux';
 
 const INITIAL_STATE = {
-  shopItems: [],
+  categories: [],
+  initialItems: [],
+  userInfo: {},
 };
 
 const reducer = (state = INITIAL_STATE, action) => {
  switch(action.type) {
-  case 'RESULT_COMPUTER':
+   case 'ADD_USERINFO':
+     return {
+       ...state,
+       userInfo: action.payload,
+     }
+  case 'CATEGORIES_LIST':
     return {
       ...state,
-      shopItems: action.payload,
+      categories: action.payload,
+    }
+  case 'INITIAL_ITEMS':
+    return {
+      ...state,
+      initialItems: action.payload,
     }
   default:
     return state;
