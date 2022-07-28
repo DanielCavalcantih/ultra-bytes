@@ -11,7 +11,10 @@ function Login() {
   }, [])
 
   return (
-    
+    <div>
+      <input type="email" />
+      <input type="password" />
+    </div>
   )
 }
 
