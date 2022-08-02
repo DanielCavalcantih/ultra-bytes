@@ -4,6 +4,7 @@ import { fetchInitialItems } from '../redux/actions';
 import CategoriesList from '../components/CategoriesList';
 import CardItem from '../components/CardItem';
 import '../styles/home.css';
+import Header from "../components/Header";
 
 function Home() {
   const dispatch = useDispatch()
@@ -14,17 +15,19 @@ function Home() {
   }, [])
 
   const listInitialItems = useSelector(state => state.reducer.initialItems);
-  console.log(listInitialItems);
 
   return (
-    <div className="home">
-      <CategoriesList />
-      <div className="container-cards">
-        {
-          listInitialItems.map(item => <CardItem title={ item.title } image={ item.thumbnail } price={ item.price } />)
-        }
+    <>
+      <Header />
+      <div className="home">
+        <CategoriesList />
+        <div className="container-cards">
+          {
+            listInitialItems.map(item => <CardItem title={ item.title } image={ item.thumbnail } price={ item.price } />)
+          }
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

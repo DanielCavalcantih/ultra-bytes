@@ -23,9 +23,11 @@ function Login() {
 
   return (
     <div>
-      <input placeholder="Digite seu email" onChange={ ({ target }) => setUserInfo({ email: target.value }) } type="email" required />
-      <input placeholder="Digite sua senha" type="password" required />
-      <button disabled={ !validateEmail(userInfo.email) } type="submit" onClick={ handleClick }>Login</button>
+      <form>
+        <input placeholder="Digite seu email" onChange={ ({ target }) => setUserInfo({ email: target.value }) } type="email" required />
+        <input placeholder="Digite sua senha" type="password" required />
+        <button disabled={ !validateEmail(userInfo.email) } type="submit" onClick={ handleClick }>Login</button>
+      </form>
     </div>
   )
 }
